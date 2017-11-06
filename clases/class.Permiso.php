@@ -3,11 +3,11 @@
 error_reporting(E_ALL);
 
 /**
- * modelo sin título - class.Permiso.php
+ * modelo sin tÃ­tulo - class.Permiso.php
  *
  * $Id$
  *
- * This file is part of modelo sin título.
+ * This file is part of modelo sin tÃ­tulo.
  *
  * Automatically generated on 24.10.2017, 11:53:54 with ArgoUML PHP module 
  * (last revised $Date: 2010-01-12 20:14:42 +0100 (Tue, 12 Jan 2010) $)
@@ -153,6 +153,15 @@ class Permiso
     public function imprimirSolicitud()
     {
         // section -64--88-56-1--7e4e0547:15f4d348c90:-8000:0000000000000BFB begin
+         $permisos = DB::table('permisos')->get();
+
+       foreach ($permisos as $permiso)
+       {
+         var_dump($permiso);
+       }
+       return $permisos;
+       // section -64--88-56-1--7e4e0547:15f4d348c90:-8000:0000000000000BFB end
+     }
         // section -64--88-56-1--7e4e0547:15f4d348c90:-8000:0000000000000BFB end
     }
 
